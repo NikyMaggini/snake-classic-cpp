@@ -23,11 +23,11 @@ int main()
 	while (window.isOpen() && !SnakeApp.GameOver)
 	{
 
-		//SnakeApp.CheckWindowLimits();	//controlla se il serpente esce dai limiti della finestra
 		//TestClass.ProcessInput(window);
 		//TestClass.Update();				//aggiorna il tempo per il movimento del serpente
 		SnakeApp.Update();
 		SnakeApp.ProcessInput();			//metodo che controlla gli eventi della finestra
+		//SnakeApp.CheckWindowLimits();	//controlla se il serpente esce dai limiti della finestra
 		window.clear();
 		//SnakeApp.DrawGrid();
 		Food.MyDrawFood(window);

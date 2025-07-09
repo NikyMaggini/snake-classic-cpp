@@ -38,6 +38,7 @@ void SnakeApp::Update()
 		if (!isMoving)
 		{
 			SnakeMove();
+			CheckWindowLimits();
 			SnakeEat();
 			CollisionBodyDetection();
 		}
@@ -191,10 +192,10 @@ void SnakeApp::DrawGrid()
 
 void SnakeApp::CheckWindowLimits()	//vedere se spostarlo in config.h
 {
-	if (lastPosition.x > Config::WINDOW_SIZE || lastPosition.x < 0 ||
-		lastPosition.y > Config::WINDOW_SIZE || lastPosition.y < 0)
+	if (snakeBodyPos.front().x < 0 || snakeBodyPos.front().x >= Config::GRID_SIZE ||
+		snakeBodyPos.front().y < 0 || snakeBodyPos.front().y >= Config::GRID_SIZE)
 	{
-		GameOver = true; // Se il serpente esce dai limiti della finestra, GameOver diventa true
+		GameOver = true;
 	}
 }
 

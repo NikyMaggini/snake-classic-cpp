@@ -8,7 +8,7 @@ TestClass::TestClass()
 {
 
 	 // 1) Calcolo la cella centrale (in griglia) e la inserisco in testBodyPos
-	int center = Config::GRID_SIZE / 2;      // es. 20/2 = 10
+	int center = Config::GRID_SIZE / 2;
 	testBodyPos.push_back({ center, center });
 
 	// 2) Creo il primo rettangolo di dimensione CELL_SIZE×CELL_SIZE, colore verde
@@ -188,8 +188,7 @@ void TestClass::GrowBy(int count)
 
 	// NOTA: non serve ricampionare tutte le posizioni qui,
 	// perché TestMove() e MyDrawSnake() si occupano di riallineare
-	// in ogni tick. Se vuoi vedere subito i segmenti extra, puoi
-	// comunque richiamare dopo questa funzione:
+	// in ogni tick. Se vuoi vedere subito i segmenti extra, richiamare dopo questa funzione:
 	//
 	//     for (size_t i = 0; i < testBodyPos.size(); ++i)
 	//     {
