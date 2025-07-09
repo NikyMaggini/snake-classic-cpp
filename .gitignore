@@ -1,0 +1,48 @@
+# .gitignore for C++ SFML project using Visual Studio 2022
+
+# Visual Studio files and folders
+.vs/
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+*.suo
+*.user
+*.ncb
+*.opensdf
+*.VC.db
+*.VC.opendb
+
+# Build directories and intermediate files
+[Bb]uild/
+Debug/
+Release/
+x64/
+
+# CMake files (if you use CMake)
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Object, binary, and library files
+*.obj
+*.o
+*.exe
+*.dll
+*.lib
+*.exp
+*.pdb
+*.idb
+*.ilk
+
+# Logs and temporary files
+*.log
+*.cache
+*.tmp
+
+# Asset bundles or archives you don't want in the repo
+*.zip
+
+# macOS
+.DS_Store
